@@ -1,12 +1,6 @@
 
 
-const Header = ({cart, removeItemCart, increseQuantity, decreaseQuantity, clearCart}) => {
-
-    // STATE DERIVADO
-    const isEmptyh = () => cart.length === 0
-
-    // TOTAL A PAGAR
-    const cartTotal = () => cart.reduce( ( total, item ) => total + (item.quantity * item.price), 0)
+const Header = ({cart, removeItemCart, increseQuantity, decreaseQuantity, clearCart, isEmptyh, cartTotal}) => {
 
     return (
         <>
