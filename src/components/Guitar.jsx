@@ -10,6 +10,7 @@ const Guitar = ({guitar, cart, setCart}) => {
         
         if(itemExists >= 0) {
             console.log('El item ya existe')
+            if(cart[itemExists].quantity >= 5) return
             const updatedCart = [...cart]       // copiamos el carrito actual para no mutarlo
             updatedCart[itemExists].quantity++  // aumentamos la cantidad del item
             setCart(updatedCart)                // actualizamos el carrito
